@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import com.hb.hibernate_out_spring.entity.Students;
 
-@Component("Service")
+@Component("service")
 public class Service{
 	
 	private SessionFactory sessionFactory;
@@ -31,8 +31,6 @@ public class Service{
 		session.beginTransaction();
 		session.save(students);
 		session.getTransaction().commit();
-		System.out.println("dddd");
-		//dao.show();
 	}
 	
 	
