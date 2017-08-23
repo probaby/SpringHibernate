@@ -2,4 +2,5 @@
 .project
 .settings
 .lib
-
+target/*
+*.class
