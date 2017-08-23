@@ -29,8 +29,15 @@
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-core</artifactId>
-		    <version>5.2.10.Final</version>
+		    <version>4.3.5.Final</version>
 		</dependency>
+		<!-- Hibernate Commons Annotations -->
+		<dependency>
+		    <groupId>org.hibernate.common</groupId>
+		    <artifactId>hibernate-commons-annotations</artifactId>
+		    <version>5.0.1.Final</version>
+		</dependency>
+		
 
 
 		<!-- junit -->
@@ -42,11 +49,18 @@
     </dependency>
 
 		<!-- oracle (can not download from Maven repository)  -->
-			<dependency>
+		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>4.3.10.RELEASE</version>
 		</dependency>
+		<!-- c3p0 -->
+		<dependency>
+		    <groupId>com.mchange</groupId>
+		    <artifactId>c3p0</artifactId>
+		    <version>0.9.5.2</version>
+		</dependency>
+		
 
 	</dependencies>
   <build>

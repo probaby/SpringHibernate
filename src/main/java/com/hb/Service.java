@@ -7,35 +7,29 @@ import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
+import com.hb.hibernate_out_spring.entity.Students;
+
 @Component("Service")
 public class Service{
 	
 	private SessionFactory sessionFactory;
-	
 
-	
-	
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
-
-
 
 	@Resource
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
 
-
-
-
 	public void show() {
 		
-		Person person=new Person();
-		person.setPersonName("aaa");
+		Students students=new Students();
+		students.setStudentsId(4);
 		Session session=sessionFactory.openSession();
 		session.beginTransaction();
-		session.save(person);
+		session.save(students);
 		session.getTransaction().commit();
 		System.out.println("dddd");
 		//dao.show();

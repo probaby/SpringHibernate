@@ -4,44 +4,23 @@ package com.hb;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
-@Component("demo")
-public class Demo {
-	
-	
+@Component("dao")
+public class Dao {
+		
 	private Service servic;
-	
-	
-	
-
-
 
 	public Service getServic() {
 		return servic;
 	}
 
-
-
-
-
-	@Resource(name="Service")
+	@Resource(name="service")
 	public void setServic(Service servic) {
 		this.servic = servic;
 	}
-
-
-
-
-
-
-
-
-
-
-
-	public void test(){
-		System.out.println("dddddd");
+	
+	public void  excuteService(){
 		servic.show();
-		
 	}
+
 
 }
